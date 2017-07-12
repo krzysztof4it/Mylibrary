@@ -12,7 +12,7 @@
    <children>
       <ToggleButton mnemonicParsing="false" onAction="#openLibrary" prefHeight="80.0" prefWidth="150.0" text="%library">
          <toggleGroup>
-            <ToggleGroup fx:id="toggleButons" />
+            <ToggleGroup fx:id="toggleButons" ></ToggleGroup>
          </toggleGroup>
          <graphic>
             <ImageView fitHeight="43.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
