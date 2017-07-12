@@ -56,9 +56,6 @@ public class TopMenuButtonsController {
             toggleButtons.getSelectedToggle().setSelected(false);
         }
 
-
-
-
         mainController.setCenter(ADD_BOOK_FXML);
     }
 
