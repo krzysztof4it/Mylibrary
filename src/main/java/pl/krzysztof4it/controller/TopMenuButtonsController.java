@@ -50,12 +50,14 @@ public class TopMenuButtonsController {
     @FXML
     public void addBook() {
 
-        System.out.println("Add book");
+        System.out.println("Add book"); /*test*/
 
-        if(toggleButtons.getSelectedToggle()!=null){
+
+        if (toggleButtons.getSelectedToggle() != null){
             toggleButtons.getSelectedToggle().setSelected(false);
         }
 
+        /*open new view*/
         mainController.setCenter(ADD_BOOK_FXML);
     }
 

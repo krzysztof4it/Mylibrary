@@ -12,7 +12,7 @@
    <children>
       <ToggleButton mnemonicParsing="false" onAction="#openLibrary" prefHeight="80.0" prefWidth="150.0" text="%library">
          <toggleGroup>
-            <ToggleGroup fx:id="toggleButons" ></ToggleGroup>
+            <ToggleGroup fx:id="toggleButtons" ></ToggleGroup>
          </toggleGroup>
          <graphic>
             <ImageView fitHeight="43.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
@@ -22,7 +22,7 @@
             </ImageView>
          </graphic>
       </ToggleButton>
-      <ToggleButton mnemonicParsing="false" onAction="#openListBooks" prefHeight="80.0" prefWidth="150.0" text="%list.books" toggleGroup="$toggleButons">
+      <ToggleButton mnemonicParsing="false" onAction="#openListBooks" prefHeight="80.0" prefWidth="150.0" text="%list.books" toggleGroup="$toggleButtons">
          <graphic>
             <ImageView fitHeight="61.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -30,7 +30,7 @@
                </image>
             </ImageView>
          </graphic></ToggleButton>
-      <ToggleButton mnemonicParsing="false" onAction="#openStatistic" prefHeight="80.0" prefWidth="150.0" text="%stats" toggleGroup="$toggleButons">
+      <ToggleButton mnemonicParsing="false" onAction="#openStatistic" prefHeight="80.0" prefWidth="150.0" text="%stats" toggleGroup="$toggleButtons">
          <graphic>
             <ImageView fitHeight="70.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                <image>
