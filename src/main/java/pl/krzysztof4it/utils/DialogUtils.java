@@ -1,7 +1,8 @@
-package pl.krzysztof4it.dialogs;
+package pl.krzysztof4it.utils;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextArea;
 
 
 import java.util.Optional;
@@ -9,11 +10,14 @@ import java.util.ResourceBundle;
 
 /**
  * Created by Krzysztof on 2017-07-28.
+ *
+ * Tutorial Alert => http://code.makery.ch/blog/javafx-dialogs-official/
  */
 public class DialogUtils {
 
     /*text from bundles ! required static ! */
-    static ResourceBundle bundle = ResourceBundle.getBundle("bundles.messages");
+    static ResourceBundle bundle = FxmlUtils.getResourceBundle();
+    /*static ResourceBundle bundle = ResourceBundle.getBundle("bundles.messages");*/
 
     /*About application window menu - help*/
     public static void dialogAboutAplication(){
@@ -37,6 +41,21 @@ public class DialogUtils {
         return result; /*return button Click!*/
 
 
+    }
+
+
+
+    public static void errorDialog(String error){
+        Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+
+        errorAlert.setTitle(bundle.getString("error.title"));
+        errorAlert.setHeaderText(bundle.getString("error.header"));
+        /*errorAlert.setContentText(bundle.getString());*/ // brak treści
+
+        TextArea textArea = new TextArea(error);
+        errorAlert.getDialogPane().setContent(textArea); /*przekazane do alertu -> pola tekstowego */
+        /*Effect => pring error in alert - "Location is not set*/
+        errorAlert.showAndWait();
     }
 
 }

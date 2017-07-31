@@ -4,7 +4,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import pl.krzysztof4it.utils.FxmlUtils;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -16,21 +18,17 @@ public class Main extends Application{
         launch(args);
     }
 
+    public static final String BORDER_PANE_MAIN_FXML = "/fxml/BorderPaneMain.fxml";
 
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Locale.setDefault(new Locale("pl")); /*change language - pl or en*/
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/BorderPaneMain.fxml")); // load file FXML
 
-        ResourceBundle bundle = ResourceBundle.getBundle("bundles.messages");
-        loader.setResources(bundle);
-
-        BorderPane borderPane = loader.load(); // element in fxml
+        Pane borderPane = FxmlUtils.fxmlLoader(BORDER_PANE_MAIN_FXML);
         Scene scene = new Scene(borderPane);
+
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Moja Biblioteczka");
-        primaryStage.setTitle(bundle.getString("title.application"));
+        primaryStage.setTitle(FxmlUtils.getResourceBundle().getString("title.application"));
         primaryStage.show();
 
     }
